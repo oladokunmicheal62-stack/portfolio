@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oladokun Micheal Lolade — Security Engineer & Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5F6F3;
+    --paper:#FFFFFF;
+    --ink:#151A1E;
+    --ink-soft:#4A5259;
+    --line:#DADDD7;
+    --accent:#1F5F5B;
+    --accent-soft:#DCEAE8;
+    --amber:#B5792E;
+  }
+  :root:not([data-theme="light"]){}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12161A;
+      --paper:#181D22;
+      --ink:#EDEFEC;
+      --ink-soft:#A7AFB5;
+      --line:#2B3238;
+      --accent:#5FB3AC;
+      --accent-soft:#1E3230;
+      --amber:#D6A25C;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12161A;
+    --paper:#181D22;
+    --ink:#EDEFEC;
+    --ink-soft:#A7AFB5;
+    --line:#2B3238;
+    --accent:#5FB3AC;
+    --accent-soft:#1E3230;
+    --amber:#D6A25C;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans", system-ui, sans-serif;
+    line-height:1.55;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:64px 24px 96px;
+  }
+  h1,h2{
+    font-family:"Source Serif 4", Georgia, serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  h1{font-size:clamp(2rem,5vw,2.75rem); line-height:1.15;}
+  h2{font-size:1.4rem; margin-bottom:18px;}
+  p{color:var(--ink-soft); max-width:64ch;}
+  a{color:var(--accent);}
+  .mono{font-family:"IBM Plex Mono", monospace; font-size:0.85rem;}
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    padding-bottom:40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:48px;
+  }
+  .mark{font-family:"IBM Plex Mono", monospace; font-size:0.85rem; color:var(--ink-soft);}
+  nav a{margin-left:20px; text-decoration:none; color:var(--ink-soft); font-size:0.9rem;}
+  nav a:hover{color:var(--ink);}
+
+  .hero-role{
+    color:var(--accent);
+    font-family:"IBM Plex Mono", monospace;
+    font-size:0.9rem;
+    margin-bottom:10px;
+    display:block;
+  }
+  .hero p{margin-top:18px; font-size:1.05rem;}
+
+  section{margin-top:72px;}
+
+  .grid-two{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
+  @media (max-width:600px){.grid-two{grid-template-columns:1fr;}}
+
+  .skill-block{
+    border-left:2px solid var(--line);
+    padding-left:16px;
+  }
+  .skill-block h3{
+    font-size:0.95rem;
+    margin:0 0 10px;
+    color:var(--ink);
+  }
+  .skill-block ul{
+    list-style:none;
+    padding:0; margin:0;
+    display:flex; flex-wrap:wrap; gap:8px;
+  }
+  .skill-block li{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:0.8rem;
+    color:var(--ink-soft);
+    border:1px solid var(--line);
+    padding:4px 9px;
+    border-radius:3px;
+  }
+
+  .project{
+    padding:24px 0;
+    border-top:1px solid var(--line);
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:20px;
+  }
+  .project:last-child{border-bottom:1px solid var(--line);}
+  @media (max-width:600px){.project{grid-template-columns:1fr; gap:8px;}}
+  .project .tag{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:0.75rem;
+    color:var(--amber);
+  }
+  .project h3{
+    font-family:"Source Serif 4", serif;
+    font-size:1.15rem;
+    font-weight:600;
+    margin:0 0 6px;
+  }
+  .project p{margin:0 0 10px; font-size:0.95rem;}
+  .project .stack{
+    display:flex; flex-wrap:wrap; gap:6px;
+  }
+  .project .stack span{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+    background:var(--accent-soft);
+    padding:2px 8px;
+    border-radius:3px;
+  }
+  .project .links a{font-size:0.85rem; margin-right:14px;}
+
+  .add-note{
+    margin-top:20px;
+    padding:16px 18px;
+    background:var(--paper);
+    border:1px dashed var(--line);
+    border-radius:4px;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+
+  footer{
+    margin-top:96px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+    font-size:0.9rem;
+    color:var(--ink-soft);
+  }
+  footer a{color:var(--ink); text-decoration:none;}
+  footer a:hover{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="mark">O.M. LOLADE // SEC + DEV</span>
+    <nav>
+      <a href="#work">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <span class="hero-role">Red Team / Offensive Security &middot; Cybersecurity Engineer &amp; Developer</span>
+    <h1>Oladokun Micheal Lolade</h1>
+    <p>I break systems to understand them, then build the ones that hold up. My work sits between defensive security — threat modeling, hardening, incident response — and the software engineering needed to ship tools that make that work repeatable.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid-two">
+      <div class="skill-block">
+        <h3>Security</h3>
+        <ul>
+          <li>Penetration testing</li>
+          <li>Threat modeling</li>
+          <li>SIEM &amp; log analysis</li>
+          <li>Network security</li>
+          <li>Incident response</li>
+          <li>Vulnerability mgmt</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Development</h3>
+        <ul>
+          <li>Python</li>
+          <li>JavaScript / Node</li>
+          <li>Bash</li>
+          <li>REST APIs</li>
+          <li>Docker</li>
+          <li>CI/CD</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <span class="tag">COURSEWORK / LAB</span>
+      <div>
+        <h3>Virtualization, Linux &amp; Network Recon</h3>
+        <p>A structured assignment covering how virtualization works under the hood, hands-on Linux administration, and network reconnaissance using ping, traceroute, and nmap. Carried out on Kali Linux and documented step-by-step with screenshots, in the style of standard security engineering documentation.</p>
+        <div class="stack"><span>Kali Linux</span><span>Virtualization</span><span>Nmap</span><span>Linux Admin</span></div>
+        <div class="links"><a href="#">Write-up (PDF)</a></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <span class="tag">PENTEST LAB</span>
+      <div>
+        <h3>Dockerised SQL Injection Pentest Lab</h3>
+        <p>Built and ran a vulnerable-vs-secure login app pair with Docker Compose, comparing raw SQL concatenation against parameterized queries. Documents the full setup, every error hit along the way, and an honest account of an injection attempt that hasn't yet succeeded — treated as an open issue, not hidden.</p>
+        <div class="stack"><span>Docker</span><span>Kali Linux</span><span>SQL Injection</span><span>curl</span></div>
+        <div class="links"><a href="project-sqli.html">View Project</a></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <span class="tag">RECON PRACTICAL</span>
+      <div>
+        <h3>wget &amp; curl: Web Recon &amp; API Testing</h3>
+        <p>Hands-on practical covering file retrieval, recursive downloads, and request inspection — headers, redirects, GET/POST requests, custom User-Agents, and a verbose TLS handshake trace. Documented with screenshots and a full error/troubleshooting log.</p>
+        <div class="stack"><span>wget</span><span>curl</span><span>Kali Linux</span><span>HTTP/TLS</span></div>
+        <div class="links"><a href="project-wget-curl.html">View Project</a></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <span class="tag">SECURITY TOOL</span>
+      <div>
+        <h3>Network Vulnerability Scanner</h3>
+        <p>A lightweight scanner that maps open ports and known CVEs across a subnet, then generates a prioritized remediation report.</p>
+        <div class="stack"><span>Python</span><span>Nmap</span><span>CVE-DB</span></div>
+        <div class="links"><a href="#">Repository</a><a href="#">Write-up</a></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <span class="tag">WEB APP</span>
+      <div>
+        <h3>Log Analysis Dashboard</h3>
+        <p>A dashboard that ingests server and firewall logs, flags anomalous access patterns, and alerts on suspicious activity in near real time.</p>
+        <div class="stack"><span>Node.js</span><span>Elasticsearch</span><span>React</span></div>
+        <div class="links"><a href="#">Repository</a><a href="#">Demo</a></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <span class="tag">AUTOMATION</span>
+      <div>
+        <h3>Incident Response Playbook Runner</h3>
+        <p>Scripts that automate the first-response steps of common incident types — isolate host, snapshot memory, collect logs — so responders can move fast.</p>
+        <div class="stack"><span>Bash</span><span>Python</span><span>YAML</span></div>
+        <div class="links"><a href="#">Repository</a></div>
+      </div>
+    </div>
+
+    <p class="add-note">These are placeholder projects. Swap in your real work — repo links, write-ups, and stack tags — whenever you're ready, or ask me to help you write it up.</p>
+  </section>
+
+  <footer id="contact">
+    <div>
+      <div>micheallolade88@gmail.com</div>
+      <div>oladokunmicheal62@gmail.com</div>
+      <div class="mono">+234 705 440 5868</div>
+      <div class="mono">Nigeria</div>
+    </div>
+    <div>
+      <a href="#">GitHub</a> &nbsp;·&nbsp;
+      <a href="#">LinkedIn</a> &nbsp;·&nbsp;
+      <a href="#">Resume</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
